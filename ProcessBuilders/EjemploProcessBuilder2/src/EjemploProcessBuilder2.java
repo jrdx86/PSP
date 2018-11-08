@@ -15,7 +15,7 @@ public class EjemploProcessBuilder2 {
 		
 		try {
 			//asignamos el directorio de trabajo al objeto ProcessBuilder
-			pb.directory(new File("/home/jorlop01/psp/EjemploRuntime/bin"));
+			pb.directory(new File("/home/jorlop01/psp/HolaMundo1/bin"));
 			
 			//ejecutamos el proceso devolviendo un objeto de tipo process
 			Process process = pb.start();

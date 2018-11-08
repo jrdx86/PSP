@@ -9,7 +9,7 @@ public class EjemploStream4 {
 	public static void main(String[] args) throws IOException {
 		
 		ProcessBuilder pb = new ProcessBuilder("java", "HolaMundo4");
-		pb.directory(new File("/home/carmar04/eclipse-workspace/Holamundo4/bin"));
+		pb.directory(new File("/home/jorlop01/psp/HolaMundo4/bin"));
 
 		Process process = pb.start();
 
@@ -23,7 +23,7 @@ public class EjemploStream4 {
 		BufferedReader br2 = new BufferedReader(isr2);
 		
 		java.io.OutputStream os = process.getOutputStream();
-		os.write("Jordiet\n".getBytes());
+		os.write("patata\n".getBytes());
 		os.flush();
 
 		String line;
