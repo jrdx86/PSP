@@ -6,8 +6,21 @@ public class hiloFibonazi extends Thread{
 		this.numero=numero;
 	}
 	public void run() {
-		for ()
-		
+		int n1 = 0;
+        int n2 = 1;
+        int aux;
+        
+
+        
+
+        for(int indice = 1; indice<=numero; indice++) {
+            aux = n1;
+            n1 = n2;
+            n2 = aux + n1;
+
+            System.out.println(n2);
+        }
+    }
 		
 	}
-}
+
