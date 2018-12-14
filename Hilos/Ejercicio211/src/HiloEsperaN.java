@@ -1,17 +1,19 @@
 
-public class HiloEsperaNseg extends Thread
+public class HiloEsperaN extends Thread
 {
 	
 	public int n;
 	
-	public HiloEsperaNseg(int n) {
+	public HiloEsperaN(int n) {
 		this.n=n*1000;
 	}
 	
 	public void run() {
 		System.out.println("Soy el "+ Thread.currentThread().getName() +" empezando.");
 		
-		
+		if(this.isDaemon()) {
+			System.out.println("Demonio detectado");
+		}
 		
 		try {
 			this.sleep(n);
