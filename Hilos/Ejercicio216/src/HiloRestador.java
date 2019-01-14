@@ -1,20 +1,16 @@
 import java.util.concurrent.Semaphore;
 
-public class HiloSumador extends Thread {
+public class HiloRestador extends Thread{
 	private String nombre;
-	private Contador contador;
 	private int numero;
+	private Contador contador;
 	private Semaphore sem;
-	
-	public HiloSumador(String nombre, Contador contador, int numero, Semaphore sem) {
+	public HiloRestador(String nombre, Contador contador, int numero, Semaphore sem) {
 		super(nombre);
 		this.contador = contador;
 		this.numero = numero;
 		this.sem = sem;
 	}
-	
-	
-	
 	public void run() {
 		System.out.println("Hilo en ejecución: " + this.getName());
 		
@@ -22,7 +18,7 @@ public class HiloSumador extends Thread {
 				sem.acquire();
 				for(int i = 0;i < this.numero;i++) {
 					Thread.sleep(1);
-					contador.incrementa();
+					contador.decrementa();
 				}
 				sem.release();
 					
@@ -32,5 +28,5 @@ public class HiloSumador extends Thread {
 			}
 			System.out.println("Resultado del hilo en ejecución: " + this.getName() + " : " + this.contador.mostrarValor());
 		}
-		
+
 }
