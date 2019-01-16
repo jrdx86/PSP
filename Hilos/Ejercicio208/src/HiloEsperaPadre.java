@@ -11,6 +11,7 @@ public class HiloEsperaPadre extends Thread{
 		System.out.println("Soy el "+ Thread.currentThread().getName() +" empezando.");
 		
 		try {
+			//HiloEsperaPadre.sleep(n);
 			this.sleep(n);
 		} catch (InterruptedException e) {
 			System.out.println(Thread.currentThread().getName() +" interrumpido.");

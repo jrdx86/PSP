@@ -17,7 +17,7 @@ public class Lanzahilos208 {
 			System.out.println(Thread.currentThread().getName() +" interrumpido.");
 			return;
 		}
-		System.out.println("Soy el hilo principal y he terminado");
+		System.out.println("Soy el hilo padre y he terminado");
 		
 	}
 
