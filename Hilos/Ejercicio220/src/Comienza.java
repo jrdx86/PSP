@@ -9,7 +9,7 @@ public class Comienza {
 			alumno.setName("alumno-" + i);
 			alumno.start();
 		}
-		Profesor profesor = new Profesor("Manolo Gómez", b);
+		Profesor profesor = new Profesor("Manolo Gomez", b);
 		profesor.start();
 	}
 }

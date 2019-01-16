@@ -21,7 +21,7 @@ public class Aula {
 
 	// Cuando el profesor saluda avisa a los alumnos con notifyAll de su llegada
 	public synchronized void llegadaProfesor(String nombre) {
-		System.out.println("Buenos días a todos. Soy el profesor " + nombre);
+		System.out.println("Buenos d�as a todos. Soy el profesor " + nombre);
 		clase_comenzada = true;
 		notifyAll();
 	}
@@ -35,7 +35,7 @@ class Alumno extends Thread {
 	}
 
 	public void run() {
-		System.out.println("Alumno " + Thread.currentThread().getName() + " llegó.");
+		System.out.println("Alumno " + Thread.currentThread().getName() + " llega.");
 		try {
 			Thread.sleep(1000);
 			saludo.saludarProfesor();

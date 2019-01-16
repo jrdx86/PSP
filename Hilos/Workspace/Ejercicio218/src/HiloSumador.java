@@ -6,6 +6,7 @@ public class HiloSumador extends Thread {
 	private int numero;
 	private Contador contador;
 	private Semaphore sem;
+	
 	public HiloSumador(String nombre, Contador contador, int numero, Semaphore sem) {
 		super(nombre);
 		this.contador = contador;
